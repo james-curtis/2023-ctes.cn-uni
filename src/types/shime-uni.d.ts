@@ -7,4 +7,10 @@ declare module '@vue/runtime-core' {
   interface ComponentCustomOptions extends Hooks {
 
   }
+
+  interface GlobalComponents {
+    view: HTMLElement
+    image: HTMLElement
+    text: HTMLElement
+  }
 }
