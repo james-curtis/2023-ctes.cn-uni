@@ -4,5 +4,5 @@
  * @type {import('@types/lint-staged').Config}
  */
 module.exports = {
-  '*.{js,jsx,ts,tsx,json}': ['eslint', 'prettier -c'],
+  '{**/*,*}.{js,ts,jsx,tsx,vue,html,astro}': ['eslint', 'prettier -c'],
 }
