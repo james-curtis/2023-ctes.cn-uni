@@ -47,9 +47,15 @@ dependencies:
   '@uni-helper/uni-network':
     specifier: ^0.17.0
     version: 0.17.0(vue@3.3.8)
+  '@uni-helper/uni-promises':
+    specifier: ^0.2.1
+    version: 0.2.1(typescript@4.9.5)(vue@3.3.8)
   pinia:
     specifier: ^2.1.7
     version: 2.1.7(typescript@4.9.5)(vue@3.3.8)
+  uniapp-router-next:
+    specifier: ^1.2.4
+    version: 1.2.4(vue@3.3.8)
   vue:
     specifier: ^3.2.45
     version: 3.3.8(typescript@4.9.5)
@@ -3525,6 +3531,21 @@ packages:
       statuses: 2.0.1
       vue: 3.3.8(typescript@4.9.5)
       vue-demi: 0.14.6(vue@3.3.8)
+    dev: false
+
+  /@uni-helper/uni-promises@0.2.1(typescript@4.9.5)(vue@3.3.8):
+    resolution: {integrity: sha512-hF0AxmGOTXFGHYRVGIYzrl/pbed6OJ371ysIRxaNaZMXk3Hsl5DfGcDthsA7eWI1HZexzTpOEWy+uuziplzTUQ==}
+    engines: {node: '>=14.18'}
+    peerDependencies:
+      typescript: ^4.8.0 || ^5.0.0
+      vue: ^3.2.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      '@dcloudio/types': 3.4.3
+      typescript: 4.9.5
+      vue: 3.3.8(typescript@4.9.5)
     dev: false
 
   /@uni-helper/vite-plugin-uni-manifest@0.2.3:
@@ -8867,6 +8888,14 @@ packages:
 
   /undici-types@5.26.5:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
+
+  /uniapp-router-next@1.2.4(vue@3.3.8):
+    resolution: {integrity: sha512-VaANimBSthZB0wKR96EqRCSUYhaoklInmAJCm7wdD4aM4yMhgB8HgVSMREld7Y/PZyZLK2s3aoeeupiLTD29fg==}
+    peerDependencies:
+      vue: ^3.2.45
+    dependencies:
+      vue: 3.3.8(typescript@4.9.5)
+    dev: false
 
   /unicode-canonical-property-names-ecmascript@2.0.0:
     resolution: {integrity: sha512-yY5PpDlfVIU5+y/BSCxAJRBIS1Zc2dDG3Ujq+sR0U+JjUevW2JhocOF+soROYDSaAezOzOKuyyixhD6mBknSmQ==}
