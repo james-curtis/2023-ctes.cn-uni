@@ -5,5 +5,12 @@ import UniPages from '@uni-helper/vite-plugin-uni-pages'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [UniManifest(), UniPages({ dts: './types/uni-pages.d.ts' }), uni()],
+  plugins: [
+    UniManifest(),
+    UniPages({
+      dts: './types/uni-pages.d.ts',
+      configSource: './src/pages.config',
+    }),
+    uni(),
+  ],
 })

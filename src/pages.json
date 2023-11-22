@@ -2,14 +2,17 @@
   "pages": [
     {
       "path": "pages/index/index",
-      "type": "home"
+      "type": "home",
+      "style": {
+        "navigationBarTitleText": "首页"
+      }
     }
   ],
   "globalStyle": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",
-    "navigationBarBackgroundColor": "#FFFFFF",
-    "backgroundColor": "#FFFFFF"
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
   },
   "subPackages": []
 }
