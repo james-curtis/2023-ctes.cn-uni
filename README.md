@@ -1,5 +1,11 @@
 # 2023-ctes.cn-uni
 
+## 开发
+
+```shell
+git clone --recursive git@github.com:james-curtis/2023-ctes.cn-uni.git
+```
+
 ## UI
 
 https://www.figma.com/file/KFJ6plC4l06xDcsPDMPZaP
