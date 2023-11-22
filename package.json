@@ -58,6 +58,7 @@
     "@qiun/uni-ucharts": "2.5.0-20230101",
     "@uni-helper/uni-network": "^0.17.0",
     "@uni-helper/uni-promises": "^0.2.1",
+    "dayjs": "^1.11.10",
     "pinia": "2.0.33",
     "uniapp-router-next": "^1.2.4",
     "vue": "^3.3.8",
