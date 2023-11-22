@@ -6,3 +6,5 @@ package-lock.json
 stats.html
 vite-plugin-monaco-editor-nls
 pnpm-lock.yaml
+src/tmui
+uni-pages.d.ts

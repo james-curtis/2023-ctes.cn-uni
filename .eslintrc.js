@@ -19,5 +19,6 @@ module.exports = {
     'no-console': ['warn', { allow: ['warn', 'error'] }],
     '@typescript-eslint/no-unused-vars': 'off',
     'vue/one-component-per-file': 'off',
+    'vue/valid-template-root': 'off',
   },
 }

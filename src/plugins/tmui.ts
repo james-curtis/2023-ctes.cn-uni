@@ -1,9 +1,8 @@
-import * as Pinia from 'pinia'
 import type { App } from 'vue'
+import tmui from '@/tmui'
 
 export default {
   install(app: App<Element>) {
-    app.use(Pinia.createPinia())
+    app.use(tmui, { shareDisable: false })
   },
-  Pinia,
 }
