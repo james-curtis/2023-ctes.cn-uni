@@ -4,6 +4,8 @@
 
 ```shell
 git clone --recursive git@github.com:james-curtis/2023-ctes.cn-uni.git
+cd 2023-ctes.cn-uni
+pnpm i
 ```
 
 ## UI
