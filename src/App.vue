@@ -1,6 +1,12 @@
 <template></template>
 <script setup lang="ts"></script>
-<style></style>
+<style>
+/* #ifdef H5 */
+.app {
+  background-color: #fff !important;
+}
+/* #endif */
+</style>
 <style>
 /* #ifdef APP-NVUE */
 @import '@/tmui/scss/nvue.css';
