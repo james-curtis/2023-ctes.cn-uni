@@ -12,12 +12,8 @@
     "importsNotUsedAsValues": "remove"
   },
   "include": [
-    "./src/*.vue",
     "./src/**/*.vue",
-    "./src/*.nvue",
     "./src/**/*.nvue",
-    "./src/*.ts",
-    "./src/*.d.ts",
     "./src/**/*.ts",
     "./types/*.d.ts"
   ]
