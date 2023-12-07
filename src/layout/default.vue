@@ -31,6 +31,9 @@ import tmTabbar from '@/tmui/components/tm-tabbar/tm-tabbar.vue'
 import tmTabbarItem from '@/tmui/components/tm-tabbar-item/tm-tabbar-item.vue'
 import { icons } from '@/config/icons'
 
+const pages = {
+  0: `/pages/index/index`,
+}
 const active = ref(0)
 
 const icon = reactive(icons)
