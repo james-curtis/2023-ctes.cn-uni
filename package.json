@@ -55,7 +55,6 @@
     "@dcloudio/uni-mp-weixin": "3.0.0-3090620231104002",
     "@dcloudio/uni-mp-xhs": "3.0.0-3090620231104002",
     "@dcloudio/uni-quickapp-webview": "3.0.0-3090620231104002",
-    "@qiun/uni-ucharts": "2.5.0-20230101",
     "@uni-helper/uni-network": "^0.17.0",
     "@uni-helper/uni-promises": "^0.2.1",
     "dayjs": "^1.11.10",

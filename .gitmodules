@@ -1,3 +1,6 @@
 [submodule "src/tmui"]
 	path = src/tmui
 	url = https://github.com/james-curtis/tmui-design-component.git
+[submodule "src/uni_modules/qiun-data-charts"]
+	path = src/uni_modules/qiun-data-charts
+	url = https://github.com/james-curtis/qiun-data-charts__uni_modules.git
