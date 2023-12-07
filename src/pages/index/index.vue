@@ -38,7 +38,7 @@ onMounted(() => {
 })
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .charts-box {
   width: 100%;
   height: 300px;
