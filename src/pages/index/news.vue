@@ -6,4 +6,4 @@
 import Default from '@/layout/default.vue'
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped></style>

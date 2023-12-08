@@ -31,16 +31,22 @@ import tmTabbar from '@/tmui/components/tm-tabbar/tm-tabbar.vue'
 import tmTabbarItem from '@/tmui/components/tm-tabbar-item/tm-tabbar-item.vue'
 import { icons } from '@/config/icons'
 
-const pages = {
-  0: `/pages/index/index`,
+const pages: Record<number, string> = {
+  0: `/pages/portal/index`,
+  1: `/pages/index/news`,
+  2: `/pages/user/my`,
 }
-const active = ref(0)
+const active = ref(-1)
 
 const icon = reactive(icons)
 
 const emit = defineEmits(['change'])
 
 function onChange(idx: number) {
+  console.log(`onChange`, idx)
   emit('change', idx)
+  if (idx in pages) {
+    uni.navigateTo({ url: pages[idx] })
+  }
 }
 </script>

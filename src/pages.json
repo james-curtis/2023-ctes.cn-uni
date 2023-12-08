@@ -1,7 +1,7 @@
 {
   "pages": [
     {
-      "path": "pages/index/index",
+      "path": "pages/portal/index",
       "style": {
         "navigationBarTitleText": "首页"
       }
@@ -9,12 +9,18 @@
   ],
   "subPackages": [
     {
-      "root": "pages/care",
+      "root": "pages/index",
       "pages": [
         {
           "path": "temperature",
           "style": {
             "navigationBarTitleText": "宝宝体温"
+          }
+        },
+        {
+          "path": "news",
+          "style": {
+            "navigationBarTitleText": "资讯"
           }
         }
       ]
