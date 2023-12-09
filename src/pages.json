@@ -22,6 +22,12 @@
           "style": {
             "navigationBarTitleText": "资讯"
           }
+        },
+        {
+          "path": "calendar",
+          "style": {
+            "navigationBarTitleText": "健康日历"
+          }
         }
       ]
     },
