@@ -1,4 +1,4 @@
-import { useSvgDataUrl } from '@/utils/icon/svg'
+import { useSvgDataUrl } from '#/utils/icon/svg'
 
 export const icons = {
   home: useSvgDataUrl('home.svg'),

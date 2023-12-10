@@ -26,10 +26,7 @@
 
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
-import tmApp from '@/tmui/components/tm-app/tm-app.vue'
-import tmTabbar from '@/tmui/components/tm-tabbar/tm-tabbar.vue'
-import tmTabbarItem from '@/tmui/components/tm-tabbar-item/tm-tabbar-item.vue'
-import { icons } from '@/config/icons'
+import { icons } from '#/config/icons'
 
 const pages: Record<number, string> = {
   0: `/pages/portal/index`,

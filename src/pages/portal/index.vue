@@ -11,8 +11,6 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import Default from '#/layout/default.vue'
-import tmDivider from '#/tmui/components/tm-divider/tm-divider.vue'
-import tmCalendarView from '#/tmui/components/tm-calendar-view/tm-calendar-view.vue'
 
 const title = ref('Hello')
 const chartData = ref()

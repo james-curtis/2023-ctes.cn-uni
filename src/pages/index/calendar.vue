@@ -25,9 +25,6 @@
 import { ref } from 'vue'
 import dayjs from 'dayjs'
 import Default from '#/layout/default.vue'
-import TmDivider from '#/tmui/components/tm-divider/tm-divider.vue'
-import TmCalendarView from '#/tmui/components/tm-calendar-view/tm-calendar-view.vue'
-import TmImage from '#/tmui/components/tm-image/tm-image.vue'
 
 const careRecord = ref([
   {

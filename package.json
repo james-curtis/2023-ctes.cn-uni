@@ -91,5 +91,10 @@
   },
   "engines": {
     "node": ">=18.18.0"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "@qiun/uni-ucharts@2.5.0-20230101": "patches/@qiun__uni-ucharts@2.5.0-20230101.patch"
+    }
   }
 }

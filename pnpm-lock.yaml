@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  '@qiun/uni-ucharts@2.5.0-20230101':
+    hash: 4bnedmzzwdoi5bkw6a2jrbgi3u
+    path: patches/@qiun__uni-ucharts@2.5.0-20230101.patch
+
 dependencies:
   '@dcloudio/uni-app':
     specifier: 3.0.0-3090620231104002
@@ -49,7 +54,7 @@ dependencies:
     version: 3.0.0-3090620231104002(postcss@8.4.32)(vue@3.3.8)
   '@qiun/uni-ucharts':
     specifier: 2.5.0-20230101
-    version: 2.5.0-20230101
+    version: 2.5.0-20230101(patch_hash=4bnedmzzwdoi5bkw6a2jrbgi3u)
   '@uni-helper/uni-network':
     specifier: ^0.17.0
     version: 0.17.0(vue@3.3.8)
@@ -3238,9 +3243,10 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
 
-  /@qiun/uni-ucharts@2.5.0-20230101:
+  /@qiun/uni-ucharts@2.5.0-20230101(patch_hash=4bnedmzzwdoi5bkw6a2jrbgi3u):
     resolution: {integrity: sha512-qpgzAUgrShgKNn0uMoN54n6/MkFeQQpK2gur0Fzokn8oTIMCVjTfnt8C2UhD20pPlm6MFxwkWF+bsJ3qd4QMvg==}
     dev: false
+    patched: true
 
   /@rollup/pluginutils@4.2.1:
     resolution: {integrity: sha512-iKnFXr7NkdZAIHiIWE+BX5ULi/ucVFYWD6TbAV+rZctiRTY2PL6tsIKhoIOaoskiWAkgu+VsbXgUVDNLHf+InQ==}

@@ -68,7 +68,8 @@
   "easycom": {
     "autoscan": true,
     "custom": {
-      "^qiun-(.*)": "/node_modules/@qiun/uni-ucharts/components/qiun-$1/qiun-$1.vue"
+      "^qiun-(.*)": "/node_modules/@qiun/uni-ucharts/components/qiun-$1/qiun-$1.vue",
+      "^tm-(.*)": "/src/app_modules/tmui/src/tmui/components/tm-$1/tm-$1.vue"
     }
   }
 }
