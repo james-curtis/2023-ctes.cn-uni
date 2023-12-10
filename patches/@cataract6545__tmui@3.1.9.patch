@@ -1,0 +1,255 @@
+diff --git a/components/tm-action-menu/tm-action-menu.vue b/components/tm-action-menu/tm-action-menu.vue
+index d29aff8b6294dd5752bd9f79b6f0c37aef52477d..bfed5872e0809d307df81949b402046606209d1c 100644
+--- a/components/tm-action-menu/tm-action-menu.vue
++++ b/components/tm-action-menu/tm-action-menu.vue
+@@ -78,8 +78,8 @@ import tmDrawer from '../tm-drawer/tm-drawer.vue'
+ import tmButton from '../tm-button/tm-button.vue'
+ import tmText from '../tm-text/tm-text.vue'
+ import tmSheet from '../tm-sheet/tm-sheet.vue'
+-import { custom_props } from '@/tmui/tool/lib/minxs'
+-import { useTmpiniaStore } from '@/tmui/tool/lib/tmpinia'
++import { custom_props } from '@cataract6545/tmui/tool/lib/minxs'
++import { useTmpiniaStore } from '@cataract6545/tmui/tool/lib/tmpinia'
+ import { useWindowInfo } from '../../tool/useFun/useWindowInfo'
+ 
+ const store = useTmpiniaStore()
+diff --git a/components/tm-button/tm-button.vue b/components/tm-button/tm-button.vue
+index 0ed4072094db0399097e3d1d999924f63befedb4..d21f8936524d96d4aeb1f341ef592bb3b28a08d0 100644
+--- a/components/tm-button/tm-button.vue
++++ b/components/tm-button/tm-button.vue
+@@ -93,8 +93,8 @@ import tmText from '../tm-text/tm-text.vue'
+ import tmIcon from '../tm-icon/tm-icon.vue'
+ import { cssstyle, tmVuetify } from '../../tool/lib/interface'
+ import { custom_props, computedTheme, computedClass, computedStyle, computedDark } from '../../tool/lib/minxs'
+-import { useTmpiniaStore } from '@/tmui/tool/lib/tmpinia'
+-import theme from '@/tmui/tool/theme/theme'
++import { useTmpiniaStore } from '@cataract6545/tmui/tool/lib/tmpinia'
++import theme from '@cataract6545/tmui/tool/theme/theme'
+ const store = useTmpiniaStore()
+ 
+ /**
+diff --git a/components/tm-cell/tm-cell.vue b/components/tm-cell/tm-cell.vue
+index 7685d9d6c7f4b59ae894292ab76384f624cfe839..417e4afeb05923e38f97965cea69788a5e3db9f4 100644
+--- a/components/tm-cell/tm-cell.vue
++++ b/components/tm-cell/tm-cell.vue
+@@ -119,7 +119,7 @@ import tmDivider from '../tm-divider/tm-divider.vue'
+ import { getCurrentInstance, computed, PropType } from 'vue'
+ import { cssDirection } from '../../tool/lib/interface'
+ import { custom_props } from '../../tool/lib/minxs'
+-import { useTmpiniaStore } from '@/tmui/tool/lib/tmpinia'
++import { useTmpiniaStore } from '@cataract6545/tmui/tool/lib/tmpinia'
+ const emits = defineEmits(['click'])
+ const props = defineProps({
+ 	...custom_props,
+diff --git a/components/tm-color-view/tm-color-view.vue b/components/tm-color-view/tm-color-view.vue
+index bbdcef29b964beb9640d919819382da3cbc34941..a3bdf1f8c579c779928441f34d70e16a7597f977 100644
+--- a/components/tm-color-view/tm-color-view.vue
++++ b/components/tm-color-view/tm-color-view.vue
+@@ -101,12 +101,12 @@
+ <script module="colorTouch" lang="wxs" src="./colorTouch.wxs"></script>
+ <!-- #endif -->
+ <script lang="ts" setup>
+-import { getCanvas } from '@/tmui/tool/function/getCanvas'
++import { getCanvas } from '@cataract6545/tmui/tool/function/getCanvas'
+ import { ref, computed, watch, nextTick, getCurrentInstance, onMounted } from 'vue'
+-import TmText from '@/tmui/components/tm-text/tm-text.vue'
+-import tmIcon from '@/tmui/components/tm-icon/tm-icon.vue'
+-import tmButton from '@/tmui/components/tm-button/tm-button.vue'
+-import { colortool } from '@/tmui/tool/theme/colortool'
++import TmText from '@cataract6545/tmui/components/tm-text/tm-text.vue'
++import tmIcon from '@cataract6545/tmui/components/tm-icon/tm-icon.vue'
++import tmButton from '@cataract6545/tmui/components/tm-button/tm-button.vue'
++import { colortool } from '@cataract6545/tmui/tool/theme/colortool'
+ // #ifdef APP-NVUE
+ // @ts-ignore
+ var dom = weex.requireModule('dom')
+diff --git a/components/tm-filterMenu/tm-filterMenu.vue b/components/tm-filterMenu/tm-filterMenu.vue
+index 913276cf78fd262ab9cbc80f5e5d9baa9e0f74b5..f997fb359390dd7863a2a68deb742fa4e69373a1 100644
+--- a/components/tm-filterMenu/tm-filterMenu.vue
++++ b/components/tm-filterMenu/tm-filterMenu.vue
+@@ -124,12 +124,12 @@
+ 	</view>
+ </template>
+ <script lang="ts" setup>
+-import tmSheet from '@/tmui/components/tm-sheet/tm-sheet.vue'
+-import tmText from '@/tmui/components/tm-text/tm-text.vue'
+-import tmIcon from '@/tmui/components/tm-icon/tm-icon.vue'
++import tmSheet from '@cataract6545/tmui/components/tm-sheet/tm-sheet.vue'
++import tmText from '@cataract6545/tmui/components/tm-text/tm-text.vue'
++import tmIcon from '@cataract6545/tmui/components/tm-icon/tm-icon.vue'
+ import { inject, computed, getCurrentInstance, nextTick, ref, onMounted, Ref, provide, toRaw, watch } from 'vue'
+ import { FilterMenuType } from './interface'
+-import { useTmpiniaStore } from '@/tmui/tool/lib/tmpinia'
++import { useTmpiniaStore } from '@cataract6545/tmui/tool/lib/tmpinia'
+ import { useWindowInfo } from '../../tool/useFun/useWindowInfo'
+ 
+ // #ifdef APP-PLUS-NVUE
+diff --git a/components/tm-filterMenu-item/tm-filterMenu-item.vue b/components/tm-filterMenu-item/tm-filterMenu-item.vue
+index 67d0ae362b903f395210e7eb71c87bdec771e25a..3078c4d0c00c0818440758a783cf7c344cae06c1 100644
+--- a/components/tm-filterMenu-item/tm-filterMenu-item.vue
++++ b/components/tm-filterMenu-item/tm-filterMenu-item.vue
+@@ -21,10 +21,10 @@
+ 	</view>
+ </template>
+ <script lang="ts" setup>
+-import tmSheet from '@/tmui/components/tm-sheet/tm-sheet.vue'
+-import tmText from '@/tmui/components/tm-text/tm-text.vue'
+-import tmIcon from '@/tmui/components/tm-icon/tm-icon.vue'
+-import tmDivider from '@/tmui/components/tm-divider/tm-divider.vue'
++import tmSheet from '@cataract6545/tmui/components/tm-sheet/tm-sheet.vue'
++import tmText from '@cataract6545/tmui/components/tm-text/tm-text.vue'
++import tmIcon from '@cataract6545/tmui/components/tm-icon/tm-icon.vue'
++import tmDivider from '@cataract6545/tmui/components/tm-divider/tm-divider.vue'
+ import { computed, getCurrentInstance, onMounted, onUnmounted, inject, ref, watchEffect, ComputedRef, nextTick, watch } from 'vue'
+ import { FilterMenuType } from '../tm-filterMenu/interface'
+ // #ifdef APP-PLUS-NVUE
+diff --git a/components/tm-fly-view/tm-fly-view.vue b/components/tm-fly-view/tm-fly-view.vue
+index c7aad7b1acd6ccf1b96dcfc6ad3611a0c1933b77..2e56f8bd83e96af4fb97f15d616328bbb3c2232d 100644
+--- a/components/tm-fly-view/tm-fly-view.vue
++++ b/components/tm-fly-view/tm-fly-view.vue
+@@ -28,7 +28,7 @@
+ 
+ <script lang="ts" setup>
+ import { ref, inject, computed, unref, PropType, getCurrentInstance, onUnmounted, onMounted, reactive } from 'vue'
+-import * as TWEEN from '@/tmui/tool/lib/tween.min.js'
++import * as TWEEN from '@cataract6545/tmui/tool/lib/tween.min.js'
+ import { findXOnQuadraticBezierCurve } from './parabola'
+ const proxy = getCurrentInstance()?.proxy ?? null
+ // #ifdef APP-NVUE
+diff --git a/components/tm-pag/tm-pag.vue b/components/tm-pag/tm-pag.vue
+index 452e6f3630408d3808bb8acd90eadc3a9374956f..c292b19a01f7f48b69469f2db508825e650525b2 100644
+--- a/components/tm-pag/tm-pag.vue
++++ b/components/tm-pag/tm-pag.vue
+@@ -7,7 +7,7 @@
+  * 微信端:npm install libpag-lite-miniprogram
+  * H5,浏览器端:npm install libpag-lite
+  */
+-import { getCanvas } from '@/tmui/tool/function/getCanvas'
++import { getCanvas } from '@cataract6545/tmui/tool/function/getCanvas'
+ import { getCurrentInstance, onMounted } from 'vue'
+ 
+ // #ifdef H5 || APP-VUE
+diff --git a/components/tm-render/tmCv/index.ts b/components/tm-render/tmCv/index.ts
+index 86c3bb3f2d31a145a3d47e0ea4a0af32b9fa3111..77816efe0eb5a681c75f8dbaa09723c15a07a640 100644
+--- a/components/tm-render/tmCv/index.ts
++++ b/components/tm-render/tmCv/index.ts
+@@ -1,9 +1,9 @@
+ import { tmRoundRect } from './shape/roundRect';
+ // @ts-expect-error
+-import * as TWEEN from "@/tmui/tool/lib/tween.min.js";
+-import { getCanvas } from "@/tmui/tool/function/getCanvas";
++import * as TWEEN from "@cataract6545/tmui/tool/lib/tween.min.js";
++import { getCanvas } from "@cataract6545/tmui/tool/function/getCanvas";
+ // #ifdef APP-NVUE
+-import { enable, WeexBridge } from "@/tmui/tool/gcanvas/index.js";
++import { enable, WeexBridge } from "@cataract6545/tmui/tool/gcanvas/index.js";
+ const dom = uni.requireNativePlugin("dom");
+ // #endif
+ import { ComponentPublicInstance } from "vue"
+diff --git a/components/tm-side-menu/tm-side-menu.vue b/components/tm-side-menu/tm-side-menu.vue
+index ced6e73845e83bfcedd36ed0f170c4a9bdd8dc9b..1f0244af6b907a086b7a92e3a15fc6f2f5a9d4a0 100644
+--- a/components/tm-side-menu/tm-side-menu.vue
++++ b/components/tm-side-menu/tm-side-menu.vue
+@@ -96,10 +96,10 @@
+ </template>
+ 
+ <script lang="ts" setup>
+-import tmText from '@/tmui/components/tm-text/tm-text.vue'
+-import tmIcon from '@/tmui/components/tm-icon/tm-icon.vue'
+-import tmSheet from '@/tmui/components/tm-sheet/tm-sheet.vue'
+-import tmBadge from '@/tmui/components/tm-badge/tm-badge.vue'
++import tmText from '@cataract6545/tmui/components/tm-text/tm-text.vue'
++import tmIcon from '@cataract6545/tmui/components/tm-icon/tm-icon.vue'
++import tmSheet from '@cataract6545/tmui/components/tm-sheet/tm-sheet.vue'
++import tmBadge from '@cataract6545/tmui/components/tm-badge/tm-badge.vue'
+ import { ref, getCurrentInstance, nextTick, Ref, computed, PropType, watch } from 'vue'
+ import { propsCustom } from './props'
+ interface listItem {
+diff --git a/components/tm-slider/slider-button.vue b/components/tm-slider/slider-button.vue
+index b455374e5719b99c9dee6560391221dd43cbda65..7a3704cc04ba77cc270c4a1051c0749db8cce589 100644
+--- a/components/tm-slider/slider-button.vue
++++ b/components/tm-slider/slider-button.vue
+@@ -59,7 +59,7 @@
+ </template>
+ 
+ <script lang="ts" setup>
+-import { useTmpiniaStore } from '@/tmui/tool/lib/tmpinia';
++import { useTmpiniaStore } from '@cataract6545/tmui/tool/lib/tmpinia';
+ import { computed } from 'vue'
+ import tmSheet from '../tm-sheet/tm-sheet.vue'
+ 
+diff --git a/components/tm-stepper/tm-stepper.vue b/components/tm-stepper/tm-stepper.vue
+index eb48bc09f8b9a8d0307d2cd3e88315c2485db75e..3253b86e5a294363ae467f10b61caeb26ed233a0 100644
+--- a/components/tm-stepper/tm-stepper.vue
++++ b/components/tm-stepper/tm-stepper.vue
+@@ -45,7 +45,7 @@
+ 	import tmSheet from '../tm-sheet/tm-sheet.vue'
+ 	import tmIcon from '../tm-icon/tm-icon.vue'
+ 	import { useTmpiniaStore } from '../../tool/lib/tmpinia'
+-	import { isNumber } from '@/tmui/tool/function/util'
++	import { isNumber } from '@cataract6545/tmui/tool/function/util'
+ 	const store = useTmpiniaStore()
+ 	const props = defineProps({
+ 		...custom_props,
+diff --git a/components/tm-time-between/tm-time-between.vue b/components/tm-time-between/tm-time-between.vue
+index 33b42d9be6c507187e857b02edf48440ae0c33c3..abcbea15ae180349076fa9d40c0b2a4a24cc6316 100644
+--- a/components/tm-time-between/tm-time-between.vue
++++ b/components/tm-time-between/tm-time-between.vue
+@@ -82,12 +82,12 @@
+ 
+ <script lang="ts" setup>
+ import { ref, computed, nextTick, PropType, watch } from 'vue'
+-import tmSheet from '@/tmui/components/tm-sheet/tm-sheet.vue'
+-import tmTag from '@/tmui/components/tm-tag/tm-tag.vue'
+-import tmText from '@/tmui/components/tm-text/tm-text.vue'
+-import tmIcon from '@/tmui/components/tm-icon/tm-icon.vue'
+-import tmButton from '@/tmui/components/tm-button/tm-button.vue'
+-import tmTimeView from '@/tmui/components/tm-time-view/tm-time-view.vue'
++import tmSheet from '@cataract6545/tmui/components/tm-sheet/tm-sheet.vue'
++import tmTag from '@cataract6545/tmui/components/tm-tag/tm-tag.vue'
++import tmText from '@cataract6545/tmui/components/tm-text/tm-text.vue'
++import tmIcon from '@cataract6545/tmui/components/tm-icon/tm-icon.vue'
++import tmButton from '@cataract6545/tmui/components/tm-button/tm-button.vue'
++import tmTimeView from '@cataract6545/tmui/components/tm-time-view/tm-time-view.vue'
+ import * as dayjs from '../../tool/dayjs/esm/index'
+ const DayJs = dayjs.default
+ interface showDetail {
+diff --git a/index.ts b/index.ts
+index 721d4f44cd5df883182a3a0412719929041050b3..58b9e867103a095edcc6ecedaaeb221940875665 100644
+--- a/index.ts
++++ b/index.ts
+@@ -5,7 +5,7 @@ import preview, * as util from './tool/function/util';
+ import { language, languageByGlobal } from "./tool/lib/language"
+ import { share } from "./tool/lib/share"
+ import { App, nextTick, ref } from "vue"
+-import PageJsonInit from "../pages.json"
++import PageJsonInit from "@/pages.json"
+ import { useTmRouterAfter, useTmRouterBefore } from "./tool/router/index"
+ import tmuiconfigdefault from "./tool/lib/tmuiconfigDefault"
+ import { pagesType, tabBarItemType, tabBarType, beforeRouterOpts, pagesCustomType } from './interface';
+diff --git a/tool/lib/minxs.ts b/tool/lib/minxs.ts
+index 79569c00975d3391f82e357f2fb431413effaeba..bf6902f14ad00078402dbf382b0ddf1419fa83fb 100644
+--- a/tool/lib/minxs.ts
++++ b/tool/lib/minxs.ts
+@@ -2,7 +2,7 @@
+ import colors from '../theme/theme';
+ import { cssDirection, linearDirection, linearDeep, borderStyle, cssstyle, tmVuetify, cssDirectionType, linearDirectionType, linearDeepType, borderStyleType } from './interface';
+ import { computed,PropType,ref } from "vue"
+-import { borderDirectionType, linearType } from '@/tmui/interface';
++import { borderDirectionType, linearType } from '@cataract6545/tmui/interface';
+ // import { useTmpiniaStore } from './tmpinia';
+ // const store = useTmpiniaStore();
+ //自定义props
+diff --git a/tool/useFun/useTouchFinger.ts b/tool/useFun/useTouchFinger.ts
+index 3f5c8d8fe982a3b38aab6887c041b3c9502fd386..20f1fc07b19030364e8f0bdb3c711d2d58d2ec58 100644
+--- a/tool/useFun/useTouchFinger.ts
++++ b/tool/useFun/useTouchFinger.ts
+@@ -8,7 +8,7 @@ interface positionType {
+  * 触摸事件
+  * @example
+  ```
+-   import { useTouchFinger } from '@/tmui/tool/useFun/useTouchFinger'
++   import { useTouchFinger } from '@cataract6545/tmui/tool/useFun/useTouchFinger'
+     const {touchstart,touchmove,touchend,touchcancel,addEventListener,direction,deltaXY,preTapPosition,angle,scale } = useTouchFinger();
+     <image 
+     @touchstart="touchstart"

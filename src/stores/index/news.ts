@@ -1,6 +1,6 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
-import { getNews } from '#/api/news'
+import { getNews } from '@/api/news'
 
 export type NewsBannerData = {
   title: string

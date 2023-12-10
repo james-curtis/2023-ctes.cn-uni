@@ -34,7 +34,7 @@
 </template>
 
 <script setup lang="ts">
-import Default from '#/layout/default.vue'
+import Default from '@/layout/default.vue'
 </script>
 
 <style lang="scss" scoped></style>

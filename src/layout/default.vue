@@ -26,7 +26,7 @@
 
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
-import { icons } from '#/config/icons'
+import { icons } from '@/config/icons'
 
 const pages: Record<number, string> = {
   0: `/pages/portal/index`,

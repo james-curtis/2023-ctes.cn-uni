@@ -5,11 +5,17 @@ settings:
   excludeLinksFromLockfile: false
 
 patchedDependencies:
+  '@cataract6545/tmui@3.1.9':
+    hash: fuo47trq4kvqketa6m3l6sivpq
+    path: patches/@cataract6545__tmui@3.1.9.patch
   '@qiun/uni-ucharts@2.5.0-20230101':
     hash: 4bnedmzzwdoi5bkw6a2jrbgi3u
     path: patches/@qiun__uni-ucharts@2.5.0-20230101.patch
 
 dependencies:
+  '@cataract6545/tmui':
+    specifier: ^3.1.9
+    version: 3.1.9(patch_hash=fuo47trq4kvqketa6m3l6sivpq)
   '@dcloudio/uni-app':
     specifier: 3.0.0-3090620231104002
     version: 3.0.0-3090620231104002(@dcloudio/types@3.4.3)(postcss@8.4.32)(vue@3.3.8)
@@ -1350,6 +1356,12 @@ packages:
   /@bcoe/v8-coverage@0.2.3:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
     dev: true
+
+  /@cataract6545/tmui@3.1.9(patch_hash=fuo47trq4kvqketa6m3l6sivpq):
+    resolution: {integrity: sha512-RoPTI83SBLoQ83/bKj9+4lu1N1hp6VcRAurfPRF7Ylo1c+beLNcWtaAeVrrtsDhvWHSETXj/sCfKKjcMr5ieiA==}
+    engines: {HBuilderX: ^3.1.0}
+    dev: false
+    patched: true
 
   /@commitlint/cli@18.4.2(typescript@4.9.5):
     resolution: {integrity: sha512-dDfb2+wzeQe6ogdHNHOy0J0nraok+La0BoxamNMhBOng9/5GoESPDmKUJ1Lt1oivh5MfIgZh0Vm6f0rxkB8CoA==}

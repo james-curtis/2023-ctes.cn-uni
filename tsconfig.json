@@ -4,9 +4,7 @@
     "sourceMap": true,
     "baseUrl": ".",
     "paths": {
-      "#/*": ["./src/*"],
-      "@/*": ["./src/app_modules/tmui/src/tmui/*"],
-      "#tmui/*": ["./src/app_modules/tmui/src/tmui/*"],
+      "@/*": ["./src/*"],
     },
     "lib": ["esnext", "dom"],
     "types": ["@dcloudio/types"],

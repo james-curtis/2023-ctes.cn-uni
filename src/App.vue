@@ -9,9 +9,9 @@
 </style>
 <style>
 /* #ifdef APP-NVUE */
-@import '#tmui/scss/nvue.css';
+@import '@cataract6545/tmui/scss/nvue.css';
 /* #endif */
 /* #ifndef APP-NVUE */
-@import '#tmui/scss/noNvue.css';
+@import '@cataract6545/tmui/scss/noNvue.css';
 /* #endif */
 </style>

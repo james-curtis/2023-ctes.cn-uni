@@ -26,8 +26,8 @@
 <script setup lang="ts">
 import { computed, onMounted } from 'vue'
 import { storeToRefs } from 'pinia'
-import Default from '#/layout/default.vue'
-import { useNewsStore } from '#/stores'
+import Default from '@/layout/default.vue'
+import { useNewsStore } from '@/stores'
 
 const newsStore = useNewsStore()
 const { newsBannerData } = storeToRefs(newsStore)

@@ -7,9 +7,7 @@ export default defineConfig({
   plugins: [uni()],
   resolve: {
     alias: {
-      '#': path.resolve(__dirname, './src'),
-      '@': path.resolve(__dirname, './src/app_modules/tmui/src/tmui'),
-      '#tmui': path.resolve(__dirname, './src/app_modules/tmui/src/tmui'),
+      '@': path.resolve(__dirname, './src'),
     },
   },
 })

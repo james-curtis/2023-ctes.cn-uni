@@ -24,7 +24,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import dayjs from 'dayjs'
-import Default from '#/layout/default.vue'
+import Default from '@/layout/default.vue'
 
 const careRecord = ref([
   {
