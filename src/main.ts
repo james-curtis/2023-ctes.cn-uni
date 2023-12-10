@@ -1,6 +1,6 @@
 import { createSSRApp } from 'vue'
 import App from './App.vue'
-import store from '@/stores'
+import store from '@/plugins/store'
 import tmui from '@/plugins/tmui'
 
 export function createApp() {
