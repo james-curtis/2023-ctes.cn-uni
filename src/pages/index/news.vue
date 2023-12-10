@@ -26,12 +26,12 @@
 <script setup lang="ts">
 import { computed, onMounted } from 'vue'
 import { storeToRefs } from 'pinia'
-import Default from '@/layout/default.vue'
-import TmInput from '@/tmui/components/tm-input/tm-input.vue'
-import TmCollapse from '@/tmui/components/tm-collapse/tm-collapse.vue'
-import TmCollapseItem from '@/tmui/components/tm-collapse-item/tm-collapse-item.vue'
-import TmText from '@/tmui/components/tm-text/tm-text.vue'
-import { useNewsStore } from '@/stores'
+import Default from '#/layout/default.vue'
+import TmInput from '#/tmui/components/tm-input/tm-input.vue'
+import TmCollapse from '#/tmui/components/tm-collapse/tm-collapse.vue'
+import TmCollapseItem from '#/tmui/components/tm-collapse-item/tm-collapse-item.vue'
+import TmText from '#/tmui/components/tm-text/tm-text.vue'
+import { useNewsStore } from '#/stores'
 
 const newsStore = useNewsStore()
 const { newsBannerData } = storeToRefs(newsStore)

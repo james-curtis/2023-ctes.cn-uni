@@ -34,9 +34,9 @@
 </template>
 
 <script setup lang="ts">
-import Default from '@/layout/default.vue'
-import TmImage from '@/tmui/components/tm-image/tm-image.vue'
-import TmCell from '@/tmui/components/tm-cell/tm-cell.vue'
+import Default from '#/layout/default.vue'
+import TmImage from '#/tmui/components/tm-image/tm-image.vue'
+import TmCell from '#/tmui/components/tm-cell/tm-cell.vue'
 </script>
 
 <style lang="scss" scoped></style>

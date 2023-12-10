@@ -8,3 +8,4 @@ vite-plugin-monaco-editor-nls
 pnpm-lock.yaml
 src/tmui
 uni-pages.d.ts
+app_modules/

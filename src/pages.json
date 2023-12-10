@@ -64,5 +64,11 @@
   "globalStyle": {
     "navigationBarTitleText": "title",
     "navigationBarBackgroundColor": "#FFFFFF"
+  },
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^qiun-(.*)": "/node_modules/@qiun/uni-ucharts/components/qiun-$1/qiun-$1.vue"
+    }
   }
 }

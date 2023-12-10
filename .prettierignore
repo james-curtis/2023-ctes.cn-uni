@@ -6,3 +6,4 @@ components.d.ts
 auto-imports.d.ts
 src/tmui
 uni-pages.d.ts
+app_modules/
