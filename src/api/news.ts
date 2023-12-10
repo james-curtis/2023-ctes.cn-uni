@@ -1,12 +1,7 @@
 import un from '@uni-helper/uni-network'
+import type { NewsBannerItem, NewsItem } from '@/interface/news'
 
-export type NewsBannerData = {
-  title: string
-  id: string
-  text: string
-}[]
-
-export async function getNews(): Promise<NewsBannerData> {
+export async function getNewsBanner(): Promise<NewsBannerItem[]> {
   un.get('/')
   return [
     {
@@ -18,4 +13,8 @@ export async function getNews(): Promise<NewsBannerData> {
 该项设计为婴幼童的健康提供了保障，同时感谢广大用户的使用！`,
     },
   ]
+}
+
+export async function getNewsList(): Promise<NewsItem[]> {
+  return []
 }
