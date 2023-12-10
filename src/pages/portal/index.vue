@@ -12,7 +12,6 @@
 import { onMounted, ref } from 'vue'
 import Default from '@/layout/default.vue'
 
-const title = ref('Hello')
 const chartData = ref()
 
 onMounted(() => {

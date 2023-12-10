@@ -30,11 +30,12 @@ import Default from '@/layout/default.vue'
 import { useNewsStore } from '@/stores'
 
 const newsStore = useNewsStore()
+const { newsBannerHandler } = newsStore
 const { newsBannerData } = storeToRefs(newsStore)
 const defaultActive = computed(() => [newsBannerData.value[0].id])
 
 onMounted(() => {
-  newsStore.refreshNewsBannerData()
+  newsBannerHandler.execute()
 })
 </script>
 

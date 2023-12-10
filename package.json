@@ -60,6 +60,7 @@
     "@qiun/uni-ucharts": "2.5.0-20230101",
     "@uni-helper/uni-network": "^0.17.0",
     "@uni-helper/uni-promises": "^0.2.1",
+    "@vueuse/core": "^10.7.0",
     "dayjs": "^1.11.10",
     "pinia": "2.0.33",
     "pinia-plugin-unistorage": "^0.0.17",
