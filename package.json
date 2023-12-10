@@ -66,7 +66,8 @@
     "pinia-plugin-unistorage": "^0.0.17",
     "uniapp-router-next": "^1.2.4",
     "vue": "^3.3.8",
-    "vue-i18n": "^9.7.0"
+    "vue-i18n": "^9.7.0",
+    "z-paging": "^2.6.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.2",
