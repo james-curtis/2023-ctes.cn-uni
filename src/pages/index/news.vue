@@ -11,20 +11,43 @@
           prefix="tmicon-search"
         />
       </view>
-      <tm-collapse :default-active-key="defaultActive">
+      <tm-collapse
+        :default-active-key="defaultActive"
+        border="2"
+        icon-pos="right"
+      >
         <tm-collapse-item
           v-for="item in newsBannerData"
           :key="item.id"
           :name="item.id"
           :title="item.title"
         >
+          <tm-divider color="black" />
           <tm-text class="px-10" :label="item.text" />
         </tm-collapse-item>
       </tm-collapse>
       <!-- z-paging默认铺满全屏，此时页面所有view都应放在z-paging标签内，否则会被盖住 -->
       <!-- 需要固定在页面顶部的view请通过slot="top"插入，包括自定义的导航栏 -->
       <view v-for="item in dataList" :key="item.id" class="item">
-        <view class="item-title">{{ item.title }}</view>
+        <view style="display: flex">
+          <tm-image
+            preview
+            :width="240"
+            :height="160"
+            src="https://store.tmui.design/api_v2/public/random_picture"
+          />
+          <view style="flex-direction: column; height: 100px">
+            <tm-text :label="item.title" style="height: 60px" />
+            <view style="display: flex; justify-content: space-between">
+              <tm-text label="资讯模式 | 2023-3-12" color="#909399" />
+              <tm-text
+                label="2阅读"
+                style="margin-left: 80px"
+                color="#909399"
+              />
+            </view>
+          </view>
+        </view>
       </view>
     </z-paging>
   </default>
