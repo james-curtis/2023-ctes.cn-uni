@@ -1,10 +1,54 @@
 <template>
   <default>
     <view class="charts-box">
-      <qiun-data-charts type="column" :chart-data="chartData" />
+      <view>
+        <view>
+          <tm-text label="指标名" style="justify-content: center" />
+          <tm-text label="422.61" style="justify-content: center" />
+          <tm-text label="指标名" style="justify-content: center" />
+        </view>
+        <view>
+          <qiun-data-charts type="tarea" :chart-data="chartData" />
+        </view>
+        <view style="display: flex">
+          <tm-button
+            style="margin-left: 25%"
+            font-color="#6f7884"
+            :transprent="true"
+            :margin="[10]"
+            :shadow="0"
+            size="small"
+            label="体温"
+            @click="totemp"
+          />
+          <tm-button
+            font-color="#6f7884"
+            :transprent="true"
+            :margin="[10]"
+            :shadow="0"
+            size="small"
+            label="颈部温度"
+            @click="totemp2"
+          />
+          <tm-button
+            font-color="#6f7884"
+            :transprent="true"
+            :margin="[10]"
+            :shadow="0"
+            size="small"
+            label="咬合压力"
+            @click="toOcclusalPressure"
+          />
+        </view>
+      </view>
+
+      <view>
+        <tm-divider align="center" label="健康日历" />
+      </view>
+      <view>
+        <tm-calendar-view />
+      </view>
     </view>
-    <tm-divider align="center" label="健康日历" />
-    <tm-calendar-view />
   </default>
 </template>
 
@@ -18,26 +62,45 @@ onMounted(() => {
   //模拟从服务器获取数据时的延时
   setTimeout(() => {
     const res = {
-      categories: ['2016', '2017', '2018', '2019', '2020', '2021'],
       series: [
         {
-          name: '目标值',
-          data: [35, 36, 31, 33, 13, 34],
-        },
-        {
-          name: '完成量',
-          data: [18, 27, 21, 24, 6, 28],
+          name: '曲线图',
+          data: [
+            [10000, 55],
+            [30000, 25],
+            [50000, 55],
+            [70000, 25],
+            [90000, 55],
+          ],
         },
       ],
     }
     chartData.value = JSON.parse(JSON.stringify(res))
   }, 500)
 })
+
+function totemp() {
+  uni.navigateTo({
+    url: '/pages/index/temperature',
+  })
+}
+
+function totemp2() {
+  uni.navigateTo({
+    url: '/pages/index/temperature2',
+  })
+}
+
+function toOcclusalPressure() {
+  uni.navigateTo({
+    url: '/pages/index/OcclusalPressure',
+  })
+}
 </script>
 
 <style lang="scss" scoped>
 .charts-box {
   width: 100%;
-  height: 300px;
+  height: 10px;
 }
 </style>

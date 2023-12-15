@@ -5,7 +5,13 @@
         <view class="header" style="margin: 5%">
           <view style="display: flex; justify-content: space-between">
             <tm-text label="宝宝体温" />
-            <tm-image :src="icon.icon" :height="25" :width="25" unit="px" />
+            <tm-image
+              :src="icon.icon"
+              :height="25"
+              :width="25"
+              style="float: right"
+              unit="px"
+            />
           </view>
           <tm-text>注意时刻关注宝宝噢...</tm-text>
         </view>
