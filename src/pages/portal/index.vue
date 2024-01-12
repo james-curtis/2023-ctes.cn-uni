@@ -4,7 +4,7 @@
       <qiun-data-charts type="column" :chart-data="chartData" />
     </view>
     <tm-divider align="center" label="健康日历" />
-    <tm-calendar-view />
+    <tm-calendar-view @confirm="onCalendarClick" />
   </default>
 </template>
 
@@ -33,6 +33,12 @@ onMounted(() => {
     chartData.value = JSON.parse(JSON.stringify(res))
   }, 500)
 })
+
+function onCalendarClick() {
+  uni.navigateTo({
+    url: '/pages/index/calendar',
+  })
+}
 </script>
 
 <style lang="scss" scoped>
