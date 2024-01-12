@@ -40,10 +40,9 @@ const icon = reactive(icons)
 const emit = defineEmits(['change'])
 
 function onChange(idx: number) {
-  console.log(`onChange`, idx)
   emit('change', idx)
   if (idx in pages) {
-    uni.navigateTo({ url: pages[idx] })
+    uni.redirectTo({ url: pages[idx] })
   }
 }
 </script>
