@@ -31,9 +31,12 @@ getTodayTemperature().then((e) => {
 })
 
 function onCalendarConfirm(date: Array<string>) {
-  const query: PageQuery = { date: date[0] }
+  const queryObj: PageQuery = { date: date[0] }
+  const query = Object.entries(queryObj)
+    .map((e) => `${e[0]}=${encodeURIComponent(e[1])}`)
+    .join('&')
   uni.navigateTo({
-    url: `/pages/index/calendar?${new URLSearchParams(query)}`,
+    url: `/pages/index/calendar?${query}`,
   })
 }
 </script>

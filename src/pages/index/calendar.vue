@@ -1,8 +1,8 @@
 <template>
   <default>
-    <tm-calendar-view v-model:model-str="modelStr" v-model="currentDate" />
-    <tm-divider align="center" label="健康日历" />
     <view class="record-list">
+      <tm-calendar-view v-model:model-str="modelStr" v-model="currentDate" />
+      <tm-divider align="center" label="健康日历" />
       <view v-for="item in careRecord" :key="item.id" class="record">
         <tm-image
           :width="45"
@@ -35,7 +35,7 @@ const modelStr = ref()
 onLoad((q) => {
   const query = q as PageQuery
   nextTick(() => {
-    currentDate.value = [query.date]
+    currentDate.value = [decodeURIComponent(query.date)]
   })
 })
 
@@ -58,6 +58,7 @@ function onCalendarClick(date: string) {
 }
 
 .record-list {
+  margin: 0 10px 0;
 }
 
 .record {
