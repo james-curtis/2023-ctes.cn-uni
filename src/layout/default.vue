@@ -1,5 +1,5 @@
 <template>
-  <tm-app>
+  <tm-app :bg-style="`padding-bottom: var(--app-bottom)`">
     <slot />
     <tm-tabbar v-model:active="active" @change="onChange">
       <tm-tabbar-item

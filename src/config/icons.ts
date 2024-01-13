@@ -14,6 +14,6 @@ export const icons = {
   press: useSvgDataUrl('press.svg'),
   settings: useSvgDataUrl('settings.svg'),
   temp: useSvgDataUrl('temp.svg'),
-  icon: useSvgDataUrl('Icon.svg'),
-  vector: useSvgDataUrl('Vector.svg'),
+  menu: useSvgDataUrl('menu.svg'),
+  vector: useSvgDataUrl('vector.svg'),
 }

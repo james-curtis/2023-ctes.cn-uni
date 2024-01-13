@@ -12,7 +12,7 @@
       "root": "pages/index",
       "pages": [
         {
-          "path": "OcclusalPressure",
+          "path": "pressure",
           "style": {
             "navigationBarTitleText": "宝宝体温"
           }
@@ -24,7 +24,7 @@
           }
         },
         {
-          "path": "temperature2",
+          "path": "neck-temperature",
           "style": {
             "navigationBarTitleText": "颈部温度"
           }

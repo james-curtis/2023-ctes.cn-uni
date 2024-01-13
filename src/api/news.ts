@@ -1,8 +1,6 @@
-import un from '@uni-helper/uni-network'
 import type { NewsBannerItem, NewsItem } from '@/interface/news'
 
 export async function getNewsBanner(): Promise<NewsBannerItem[]> {
-  un.get('/')
   return [
     {
       title: '产品介绍 api',

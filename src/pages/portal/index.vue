@@ -1,53 +1,16 @@
 <template>
   <default>
-    <view class="charts-box">
-      <view>
-        <view>
-          <tm-text label="指标名" style="justify-content: center" />
-          <tm-text label="422.61" style="justify-content: center" />
-          <tm-text label="指标名" style="justify-content: center" />
-        </view>
-        <view>
-          <qiun-data-charts type="tarea" :chart-data="chartData" />
-        </view>
-        <view style="display: flex">
-          <tm-button
-            style="margin-left: 25%"
-            font-color="#6f7884"
-            :transprent="true"
-            :margin="[10]"
-            :shadow="0"
-            size="small"
-            label="体温"
-            @click="totemp"
-          />
-          <tm-button
-            font-color="#6f7884"
-            :transprent="true"
-            :margin="[10]"
-            :shadow="0"
-            size="small"
-            label="颈部温度"
-            @click="totemp2"
-          />
-          <tm-button
-            font-color="#6f7884"
-            :transprent="true"
-            :margin="[10]"
-            :shadow="0"
-            size="small"
-            label="咬合压力"
-            @click="toOcclusalPressure"
-          />
-        </view>
+    <view>
+      <view class="charts-box">
+        <qiun-data-charts type="area" :chart-data="chartData" />
       </view>
 
-      <view>
-        <tm-divider align="center" label="健康日历" />
+      <view class="grid-link">
+        <grid-banner />
       </view>
-      <view>
-        <tm-calendar-view />
-      </view>
+
+      <tm-divider align="center" label="健康日历" />
+      <tm-calendar-view />
     </view>
   </default>
 </template>
@@ -55,6 +18,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import Default from '@/layout/default.vue'
+import GridBanner from '@/components/grid-banner.vue'
 
 const chartData = ref()
 
@@ -78,33 +42,16 @@ onMounted(() => {
     chartData.value = JSON.parse(JSON.stringify(res))
   }, 500)
 })
-function onCalendarClick() {
-  uni.navigateTo({
-    url: '/pages/index/calendar',
-  })
-}
-function totemp() {
-  uni.navigateTo({
-    url: '/pages/index/temperature',
-  })
-}
-
-function totemp2() {
-  uni.navigateTo({
-    url: '/pages/index/temperature2',
-  })
-}
-
-function toOcclusalPressure() {
-  uni.navigateTo({
-    url: '/pages/index/OcclusalPressure',
-  })
-}
 </script>
 
 <style lang="scss" scoped>
 .charts-box {
-  width: 100%;
-  height: 10px;
+  margin: 0 15px 0 0;
+  height: 300px;
+}
+
+.grid-link {
+  display: flex;
+  justify-content: center;
 }
 </style>

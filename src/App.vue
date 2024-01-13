@@ -1,11 +1,10 @@
 <template></template>
 <script setup lang="ts"></script>
 <style>
-/* #ifdef H5 */
 .app {
   background-color: #fff !important;
+  --app-bottom: 75px;
 }
-/* #endif */
 </style>
 <style>
 /* #ifdef APP-NVUE */
