@@ -25,7 +25,7 @@ function useGridList({ props }: { props: Props }) {
       events: { click: toNeckTemp },
     },
     {
-      attrs: { label: '颈部温度', key: 'pressure' },
+      attrs: { label: '咬合压力', key: 'pressure' },
       events: { click: toPressure },
     },
   ])

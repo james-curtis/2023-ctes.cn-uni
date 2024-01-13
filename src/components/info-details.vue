@@ -15,9 +15,10 @@
         <text>{{ gridInfo?.today.label }}</text>
       </view>
       <view class="list-item__right">
-        <text>{{ gridInfo?.today.value }}</text>
-        <tm-image :src="icons.vector" :width="33" :height="21" />
-        <tm-text color="green">{{ gridInfo?.today.percentage }}</tm-text>
+        <text style="color: green; font-size: 0.8em">{{
+          gridInfo?.today.percentage
+        }}</text>
+        <text>{{ gridInfo?.today.value }} °C</text>
       </view>
     </view>
     <view class="list-item">
@@ -25,9 +26,10 @@
         <text>{{ gridInfo?.yesterday.label }}</text>
       </view>
       <view class="list-item__right">
-        <text>{{ gridInfo?.yesterday.value }}</text>
-        <tm-image :src="icons.vector" :width="33" :height="21" />
-        <tm-text color="green">{{ gridInfo?.yesterday.percentage }}</tm-text>
+        <text v-if="gridInfo?.yesterday.percentage" style="color: green">{{
+          gridInfo?.yesterday.percentage
+        }}</text>
+        <text>{{ gridInfo?.yesterday.value }} °C</text>
       </view>
     </view>
   </view>
@@ -64,7 +66,6 @@ const { tips, title, desc, gridInfo } = toRefs(props)
 
 <style lang="scss" scoped>
 .charts-box {
-  width: 100%;
   height: 300px;
 }
 
@@ -93,7 +94,7 @@ const { tips, title, desc, gridInfo } = toRefs(props)
     &__left,
     &__right {
       display: flex;
-      gap: 5px;
+      gap: 10px;
     }
   }
 }

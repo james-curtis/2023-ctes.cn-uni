@@ -1,7 +1,7 @@
 export type DayData = {
   label: string
   value: string
-  percentage: string
+  percentage?: string
 }
 
 export type GridTipsData = {
