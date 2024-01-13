@@ -2,7 +2,11 @@
   <default>
     <view>
       <view class="charts-box">
-        <qiun-data-charts type="area" :chart-data="chartData" />
+        <qiun-data-charts
+          type="area"
+          :opts="chartOps"
+          :chart-data="chartData"
+        />
       </view>
 
       <view class="grid-link">
@@ -19,9 +23,11 @@
 import { onMounted, ref } from 'vue'
 import Default from '@/layout/default.vue'
 import GridBanner from '@/components/grid-banner.vue'
+import { useGradientChart } from '@/composition/use-gradient-chart'
 
 const chartData = ref()
 
+const { chartOps } = useGradientChart()
 onMounted(() => {
   //模拟从服务器获取数据时的延时
   setTimeout(() => {
