@@ -1,6 +1,6 @@
 <template>
   <default>
-    <tm-calendar-view />
+    <tm-calendar-view v-model:model-str="modelStr" v-model="currentDate" />
     <tm-divider align="center" label="健康日历" />
     <view class="record-list">
       <view v-for="item in careRecord" :key="item.id" class="record">
@@ -22,16 +22,33 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import type { CalendarRecordItem } from '@/interface/calendar'
-import Default from '@/layout/default.vue'
+import { nextTick, ref, watch } from 'vue'
+import { onLoad } from '@dcloudio/uni-app'
+import type { CalendarRecordItem, PageQuery } from '@/interface/calendar'
+import Default from '@/layout/default'
 import { getCalendarRecord } from '@/api'
 
 const careRecord = ref<CalendarRecordItem[]>([])
 
-getCalendarRecord('').then((e) => {
-  careRecord.value = e
+const currentDate = ref()
+const modelStr = ref()
+onLoad((q) => {
+  const query = q as PageQuery
+  nextTick(() => {
+    currentDate.value = [query.date]
+  })
 })
+
+watch(
+  () => modelStr.value,
+  (date: string) => onCalendarClick(date)
+)
+
+function onCalendarClick(date: string) {
+  getCalendarRecord(date).then((e) => {
+    careRecord.value = e
+  })
+}
 </script>
 
 <style lang="scss" scoped>

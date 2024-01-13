@@ -5,3 +5,7 @@ export type CalendarRecordItem = {
   subtitle: string
   image: string
 }
+
+export type PageQuery = {
+  date: string
+}

@@ -1,23 +1,26 @@
 <template>
-  <tm-app :bg-style="`padding-bottom: var(--app-bottom)`">
+  <tm-app
+    :bg-style="`padding-bottom: var(--app-bottom)`"
+    :navbar-dark-auto="false"
+  >
     <slot />
     <tm-tabbar v-model:active="active" @change="onChange">
       <tm-tabbar-item
         text="首页"
         active-color="#3C9CFF"
-        :icon="icon.home"
+        :icon="icons.home"
         @click="active = 0"
       />
       <tm-tabbar-item
         text="资讯"
         active-color="#3C9CFF"
-        :icon="icon.news"
+        :icon="icons.news"
         @click="active = 1"
       />
       <tm-tabbar-item
         text="我的"
         active-color="#3C9CFF"
-        :icon="icon.account"
+        :icon="icons.account"
         @click="active = 2"
       />
     </tm-tabbar>
@@ -25,7 +28,7 @@
 </template>
 
 <script lang="ts" setup>
-import { reactive, ref } from 'vue'
+import { ref } from 'vue'
 import { icons } from '@/config/icons'
 
 const pages: Record<number, string> = {
@@ -34,8 +37,6 @@ const pages: Record<number, string> = {
   2: `/pages/user/my`,
 }
 const active = ref(-1)
-
-const icon = reactive(icons)
 
 const emit = defineEmits(['change'])
 

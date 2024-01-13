@@ -12,22 +12,22 @@
   <view class="list">
     <view class="list-item">
       <view class="list-item__left">
-        <text>{{ gridInfo.today.label }}</text>
+        <text>{{ gridInfo?.today.label }}</text>
       </view>
       <view class="list-item__right">
-        <text>{{ gridInfo.today.value }}</text>
+        <text>{{ gridInfo?.today.value }}</text>
         <tm-image :src="icons.vector" :width="33" :height="21" />
-        <tm-text color="green">{{ gridInfo.today.percentage }}</tm-text>
+        <tm-text color="green">{{ gridInfo?.today.percentage }}</tm-text>
       </view>
     </view>
     <view class="list-item">
       <view class="list-item__left">
-        <text>{{ gridInfo.yesterday.label }}</text>
+        <text>{{ gridInfo?.yesterday.label }}</text>
       </view>
       <view class="list-item__right">
-        <text>{{ gridInfo.yesterday.value }}</text>
+        <text>{{ gridInfo?.yesterday.value }}</text>
         <tm-image :src="icons.vector" :width="33" :height="21" />
-        <tm-text color="green">{{ gridInfo.yesterday.percentage }}</tm-text>
+        <tm-text color="green">{{ gridInfo?.yesterday.percentage }}</tm-text>
       </view>
     </view>
   </view>
@@ -35,16 +35,30 @@
 </template>
 
 <script setup lang="ts">
-import { toRefs } from '@vueuse/core'
+import { toRefs } from 'vue'
+import type { PropType } from 'vue'
 import type { GridTipsData } from '@/interface/info-details'
 import { icons } from '@/config/icons'
 
-const props = defineProps<{
-  title: string
-  tips: string
-  desc: string
-  gridInfo: GridTipsData
-}>()
+const props = defineProps({
+  title: {
+    required: true,
+    type: String,
+  },
+  tips: {
+    required: true,
+    type: String,
+  },
+  desc: {
+    required: true,
+    type: String,
+  },
+  gridInfo: {
+    required: true,
+    type: Object as PropType<GridTipsData>,
+  },
+})
+
 const { tips, title, desc, gridInfo } = toRefs(props)
 </script>
 

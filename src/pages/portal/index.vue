@@ -14,13 +14,14 @@
       </view>
 
       <tm-divider align="center" label="健康日历" />
-      <tm-calendar-view />
+      <tm-calendar-view @confirm="onCalendarConfirm" />
     </view>
   </default>
 </template>
 
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
+import type { PageQuery } from '@/interface/calendar'
 import Default from '@/layout/default.vue'
 import GridBanner from '@/components/grid-banner.vue'
 import { useGradientChart } from '@/composition/use-gradient-chart'
@@ -48,6 +49,13 @@ onMounted(() => {
     chartData.value = JSON.parse(JSON.stringify(res))
   }, 500)
 })
+
+function onCalendarConfirm(date: Array<string>) {
+  const query: PageQuery = { date: date[0] }
+  uni.navigateTo({
+    url: `/pages/index/calendar?${new URLSearchParams(query)}`,
+  })
+}
 </script>
 
 <style lang="scss" scoped>

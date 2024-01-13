@@ -1,9 +1,10 @@
-export interface DayData {
+export type DayData = {
   label: string
   value: string
   percentage: string
 }
-export interface GridTipsData {
+
+export type GridTipsData = {
   today: DayData
   yesterday: DayData
 }
