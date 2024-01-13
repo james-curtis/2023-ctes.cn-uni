@@ -13,7 +13,7 @@
         />
         <view class="record__desc">
           <text class="record__title">{{ item.title }}</text>
-          <text class="record__sub">{{ item.subtitle }}}</text>
+          <text class="record__sub">{{ item.subtitle }}</text>
         </view>
         <view class="record__time">{{ item.datetime }}</view>
       </view>
@@ -23,25 +23,15 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import dayjs from 'dayjs'
+import type { CalendarRecordItem } from '@/interface/calendar'
 import Default from '@/layout/default.vue'
+import { getCalendarRecord } from '@/api'
 
-const careRecord = ref([
-  {
-    id: 1,
-    datetime: dayjs('2023-12-9 16:49:57').format('HH:mm'),
-    title: '喂药记录',
-    subtitle: '描述信息',
-    image: 'https://picsum.photos/100',
-  },
-  {
-    id: 2,
-    datetime: dayjs(new Date()).format('HH:mm'),
-    title: '喂药记录',
-    subtitle: '描述信息',
-    image: 'https://picsum.photos/200',
-  },
-])
+const careRecord = ref<CalendarRecordItem[]>([])
+
+getCalendarRecord('').then((e) => {
+  careRecord.value = e
+})
 </script>
 
 <style lang="scss" scoped>

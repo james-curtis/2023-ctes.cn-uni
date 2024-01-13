@@ -78,7 +78,11 @@ onMounted(() => {
     chartData.value = JSON.parse(JSON.stringify(res))
   }, 500)
 })
-
+function onCalendarClick() {
+  uni.navigateTo({
+    url: '/pages/index/calendar',
+  })
+}
 function totemp() {
   uni.navigateTo({
     url: '/pages/index/temperature',
