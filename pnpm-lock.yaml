@@ -82,6 +82,9 @@ dependencies:
   uniapp-router-next:
     specifier: ^1.2.4
     version: 1.2.4(vue@3.3.8)
+  vk-uview-ui:
+    specifier: ^1.5.2
+    version: 1.5.2
   vue:
     specifier: ^3.3.8
     version: 3.3.8(typescript@4.9.5)
@@ -9473,6 +9476,11 @@ packages:
       terser: 5.24.0
     optionalDependencies:
       fsevents: 2.3.3
+
+  /vk-uview-ui@1.5.2:
+    resolution: {integrity: sha512-RRZgiEAc8qaUerSi7lSbrkCoLBgRUwFQHwP1V44pJO7Js+7HeHFEkkpPrtkOi14hl4CntR4qIhIDvaKmIJqVsw==}
+    engines: {HBuilderX: ^3.1.0}
+    dev: false
 
   /vue-demi@0.14.6(vue@3.3.8):
     resolution: {integrity: sha512-8QA7wrYSHKaYgUxDA5ZC24w+eHm3sYCbp0EzcDwKqN3p6HqtTCGR/GVsPyZW92unff4UlcSh++lmqDWN3ZIq4w==}

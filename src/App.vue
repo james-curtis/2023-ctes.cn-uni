@@ -14,3 +14,6 @@
 @import '@cataract6545/tmui/scss/noNvue.css';
 /* #endif */
 </style>
+<style lang="scss">
+@import 'vk-uview-ui/index.scss';
+</style>
