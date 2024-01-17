@@ -2,7 +2,7 @@
 <script setup lang="ts"></script>
 <style>
 .app {
-  background-color: #fff !important;
+  background-color: #fff;
   --app-bottom: 75px;
 }
 </style>

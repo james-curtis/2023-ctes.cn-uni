@@ -2,6 +2,7 @@
   <tm-app
     :bg-style="`padding-bottom: var(--app-bottom)`"
     :navbar-dark-auto="false"
+    color="white"
   >
     <slot />
     <tm-tabbar v-model:active="active" @change="onChange">
@@ -34,7 +35,7 @@ import { icons } from '@/config/icons'
 const pages: Record<number, string> = {
   0: `/pages/portal/index`,
   1: `/pages/index/news`,
-  2: `/pages/user/my`,
+  2: `/pages/user/home`,
 }
 const active = ref(-1)
 
