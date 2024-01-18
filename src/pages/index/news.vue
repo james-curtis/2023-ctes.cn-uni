@@ -38,8 +38,13 @@
           <view class="news-cell__text">
             <tm-text :label="item.title" />
             <view class="news-cell__tips">
-              <tm-text label="资讯模式 | 2023-3-12" color="#909399" />
-              <tm-text label="2 阅读" color="#909399" />
+              <tm-text
+                :label="`资讯模式 | ${dayjs(item.createTime).format(
+                  'YYYY-DD-MM'
+                )}`"
+                color="#909399"
+              />
+              <tm-text :label="`${item.read} 阅读`" color="#909399" />
             </view>
           </view>
         </view>
@@ -52,6 +57,8 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
 import { storeToRefs } from 'pinia'
+import dayjs from 'dayjs'
+import type { NewsItem } from '@/interface/news'
 import Default from '@/layout/default.vue'
 import { useNewsStore } from '@/stores'
 
@@ -65,7 +72,7 @@ onMounted(() => {
 })
 
 const paging = ref<any>(null)
-const dataList = ref<{ title: string; id: string }[]>([])
+const dataList = ref<NewsItem[]>([])
 
 const queryList = (pageNo: number, pageSize: number) => {
   newsHandler.execute().then(
