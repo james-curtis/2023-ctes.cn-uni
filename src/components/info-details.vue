@@ -18,7 +18,7 @@
         <text style="color: green; font-size: 0.8em">{{
           gridInfo?.today.percentage
         }}</text>
-        <text>{{ gridInfo?.today.value }} °C</text>
+        <text>{{ gridInfo?.today.value }}{{ props.unitLabel }}</text>
       </view>
     </view>
     <view class="list-item">
@@ -29,11 +29,11 @@
         <text v-if="gridInfo?.yesterday.percentage" style="color: green">{{
           gridInfo?.yesterday.percentage
         }}</text>
-        <text>{{ gridInfo?.yesterday.value }} °C</text>
+        <text>{{ gridInfo?.yesterday.value }}{{ props.unitLabel }}</text>
       </view>
     </view>
   </view>
-  <view class="tips" v-text="desc" />
+  <view class="tips" v-html="desc" />
 </template>
 
 <script setup lang="ts">
@@ -58,6 +58,10 @@ const props = defineProps({
   gridInfo: {
     required: true,
     type: Object as PropType<GridTipsData>,
+  },
+  unitLabel: {
+    default: ' °C',
+    type: String,
   },
 })
 

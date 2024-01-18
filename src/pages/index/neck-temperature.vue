@@ -1,10 +1,11 @@
 <template>
   <default>
     <info-details
-      title="宝宝体温"
+      title="颈部温度"
       tips="注意时刻关注宝宝噢..."
       :desc="desc"
       :grid-info="gridInfo"
+      unit-label=" %"
     >
       <qiun-data-charts type="area" :opts="chartOps" :chart-data="chartData" />
     </info-details>
@@ -17,18 +18,20 @@ import type { GridTipsData } from '@/interface/info-details'
 import Default from '@/layout/default.vue'
 import InfoDetails from '@/components/info-details.vue'
 import { useGradientChart } from '@/composition/use-gradient-chart'
-import { getTemperature } from '@/api/mock/life-indicator'
+import { getHumidity } from '@/api/mock/life-indicator'
 
 const gridInfo = ref<GridTipsData>({
-  today: { label: '今日体温', value: '36.61', percentage: '12%' },
-  yesterday: { label: '昨日体温', value: '36.61' },
+  today: { label: '今日温度', value: '36.61', percentage: '12%' },
+  yesterday: { label: '昨日温度', value: '36.61' },
 })
 const desc = ref<string>(
-  '您家宝宝的温度是xx，/在正常范围之内，非常健康哦，祝您的宝宝健康快乐平安长大！/已经超出正常温度了哦，建议即刻送往医院治疗！饮食上……/有点低烧哦，建议补充体液，饮食……'
+  `1. 当前湿度正常，宝宝可以快乐玩耍哦<br>
+2.注意！当前湿度偏高，请注意观察宝宝的状态，及时给宝宝擦口水哦。另外，可以通过让宝宝掌握吸允和吞咽技巧，给宝宝吃一些健胃的食物让宝宝减少流口水频率。<br>
+3.注意！当前湿度超高。请注意观察宝宝的情况，应该及时的到专业的医院采取方法进行治疗，防止宝宝出现一些口腔疾病，并做好宝宝身体的护理。`
 )
 
 const chartData = ref()
-getTemperature().then((e) => {
+getHumidity().then((e) => {
   chartData.value = e
   const today =
     e.series[0].data.reduce(
@@ -54,4 +57,5 @@ getTemperature().then((e) => {
 })
 
 const { chartOps } = useGradientChart()
+Object.assign(chartOps.value, { yAxis: { data: [{ min: 50, max: 90 }] } })
 </script>

@@ -73,6 +73,9 @@ dependencies:
   '@tuniao/tnui-vue3-uniapp':
     specifier: ^1.0.20
     version: 1.0.20(@dcloudio/types@3.4.3)(@tuniao/tn-icon@1.8.0)(@tuniao/tn-style@1.0.19)(postcss@8.4.32)(sass@1.69.5)(typescript@4.9.5)(vite@4.4.12)(vue@3.3.8)
+  '@types/lodash':
+    specifier: ^4.14.202
+    version: 4.14.202
   '@uni-helper/uni-network':
     specifier: ^0.17.0
     version: 0.17.0(vue@3.3.8)
@@ -85,6 +88,9 @@ dependencies:
   dayjs:
     specifier: ^1.11.10
     version: 1.11.10
+  lodash:
+    specifier: ^4.17.21
+    version: 4.17.21
   pinia:
     specifier: 2.0.33
     version: 2.0.33(typescript@4.9.5)(vue@3.3.8)
@@ -8123,7 +8129,6 @@ packages:
 
   /lodash@4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
-    dev: true
 
   /log-update@5.0.1:
     resolution: {integrity: sha512-5UtUDQ/6edw4ofyljDNcOVJQ4c7OjDro4h3y8e1GQL5iYElYclVHJ3zeWchylvMaKnDbDilC8irOVyexnA/Slw==}
