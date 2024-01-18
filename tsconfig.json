@@ -4,10 +4,10 @@
     "sourceMap": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
+      "@/*": ["./src/*"]
     },
     "lib": ["esnext", "dom"],
-    "types": ["@dcloudio/types"],
+    "types": ["@dcloudio/types", "@tuniao/tnui-vue3-uniapp/global.d.ts"],
     "preserveValueImports": false,
     "importsNotUsedAsValues": "remove"
   },

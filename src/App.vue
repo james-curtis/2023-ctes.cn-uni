@@ -17,3 +17,6 @@
 <style lang="scss">
 @import 'vk-uview-ui/index.scss';
 </style>
+<style>
+@import '@tuniao/tn-style/dist/uniapp/index.css';
+</style>

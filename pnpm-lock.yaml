@@ -64,6 +64,15 @@ dependencies:
   '@qiun/uni-ucharts':
     specifier: 2.5.0-20230101
     version: 2.5.0-20230101(patch_hash=4bnedmzzwdoi5bkw6a2jrbgi3u)
+  '@tuniao/tn-icon':
+    specifier: ^1.8.0
+    version: 1.8.0
+  '@tuniao/tn-style':
+    specifier: ^1.0.19
+    version: 1.0.19
+  '@tuniao/tnui-vue3-uniapp':
+    specifier: ^1.0.20
+    version: 1.0.20(@dcloudio/types@3.4.3)(@tuniao/tn-icon@1.8.0)(@tuniao/tn-style@1.0.19)(postcss@8.4.32)(sass@1.69.5)(typescript@4.9.5)(vite@4.4.12)(vue@3.3.8)
   '@uni-helper/uni-network':
     specifier: ^0.17.0
     version: 0.17.0(vue@3.3.8)
@@ -84,7 +93,7 @@ dependencies:
     version: 0.0.17(typescript@4.9.5)(vue@3.3.8)
   tnuiv3p-tn-update-user-info-popup:
     specifier: ^1.0.2
-    version: 1.0.2(@tuniao/tn-icon@1.8.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.19)(sass@1.69.5)(typescript@4.9.5)(vue@3.3.8)
+    version: 1.0.2(@tuniao/tn-icon@1.8.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.20)(sass@1.69.5)(typescript@4.9.5)(vue@3.3.8)
   uniapp-router-next:
     specifier: ^1.2.4
     version: 1.2.4(vue@3.3.8)
@@ -3840,8 +3849,8 @@ packages:
     resolution: {integrity: sha512-n96Da8uUot3wIsVV/x5i9XhDCNHrTL/ZXjfoYFkliJ1wNXfVh7D0Muhx8FjE9trBQE8AtniX4kEc3YsKV2qzwQ==}
     dev: false
 
-  /@tuniao/tnui-vue3-uniapp@1.0.19(@dcloudio/types@3.4.3)(@tuniao/tn-icon@1.8.0)(@tuniao/tn-style@1.0.19)(postcss@8.4.32)(sass@1.69.5)(typescript@4.9.5)(vite@4.4.12)(vue@3.3.8):
-    resolution: {integrity: sha512-31hcZj/oCYAzHh3w0Cc9CsHV7QG+YcuY2DKgYZRWjPCgAukcYYNX7/OCY6pYi1Ph5Gff7cQqQFPjPkt2uI32Xw==}
+  /@tuniao/tnui-vue3-uniapp@1.0.20(@dcloudio/types@3.4.3)(@tuniao/tn-icon@1.8.0)(@tuniao/tn-style@1.0.19)(postcss@8.4.32)(sass@1.69.5)(typescript@4.9.5)(vite@4.4.12)(vue@3.3.8):
+    resolution: {integrity: sha512-Dh+VgnzgIlfHEpQr6llzC8z/b8hu/Bx6Hk4euBigjCNgfTGV0AwDe58od/wBmFPXwrgiz3RXrqosij2athBxUw==}
     peerDependencies:
       '@tuniao/tn-icon': ^1.4.0
       '@tuniao/tn-style': ^1.0.17
@@ -9691,7 +9700,7 @@ packages:
     resolution: {integrity: sha512-3f0uOEAQwIqGuWW2MVzYg8fV/QNnc/IpuJNG837rLuczAaLVHslWHZQj4IGiEl5Hs3kkbhwL9Ab7Hrsmuj+Smw==}
     dev: true
 
-  /tnuiv3p-tn-update-user-info-popup@1.0.2(@tuniao/tn-icon@1.8.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.19)(sass@1.69.5)(typescript@4.9.5)(vue@3.3.8):
+  /tnuiv3p-tn-update-user-info-popup@1.0.2(@tuniao/tn-icon@1.8.0)(@tuniao/tn-style@1.0.19)(@tuniao/tnui-vue3-uniapp@1.0.20)(sass@1.69.5)(typescript@4.9.5)(vue@3.3.8):
     resolution: {integrity: sha512-NNSvc+fDKQbl/5JA0J4tiNOoVGTLNCuJHYqZUf6csEsvSCPYB5YEFHxkaWg/gK7Qc8iNdmLV+Pd1wtJdXdCTqQ==}
     peerDependencies:
       '@tuniao/tn-icon': ^1.4.0
@@ -9703,7 +9712,7 @@ packages:
     dependencies:
       '@tuniao/tn-icon': 1.8.0
       '@tuniao/tn-style': 1.0.19
-      '@tuniao/tnui-vue3-uniapp': 1.0.19(@dcloudio/types@3.4.3)(@tuniao/tn-icon@1.8.0)(@tuniao/tn-style@1.0.19)(postcss@8.4.32)(sass@1.69.5)(typescript@4.9.5)(vite@4.4.12)(vue@3.3.8)
+      '@tuniao/tnui-vue3-uniapp': 1.0.20(@dcloudio/types@3.4.3)(@tuniao/tn-icon@1.8.0)(@tuniao/tn-style@1.0.19)(postcss@8.4.32)(sass@1.69.5)(typescript@4.9.5)(vite@4.4.12)(vue@3.3.8)
       sass: 1.69.5
       typescript: 4.9.5
       vue: 3.3.8(typescript@4.9.5)
