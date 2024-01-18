@@ -65,6 +65,7 @@
     "dayjs": "^1.11.10",
     "pinia": "2.0.33",
     "pinia-plugin-unistorage": "^0.0.17",
+    "tnuiv3p-tn-update-user-info-popup": "^1.0.2",
     "uniapp-router-next": "^1.2.4",
     "vk-uview-ui": "^1.5.2",
     "vue": "^3.3.8",

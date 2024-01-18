@@ -1,5 +1,5 @@
 <template>
-  <default color="#ededed">
+  <Default color="#ededed">
     <u-navbar :is-back="false" title="" :border-bottom="false">
       <view class="u-flex u-row-right" style="width: 100%">
         <view class="camera u-flex u-row-center">
@@ -9,11 +9,13 @@
     </u-navbar>
     <view class="u-flex user-box u-p-l-30 u-p-r-20 u-p-b-30">
       <view class="u-m-r-10">
-        <u-avatar :src="pic" size="140" />
+        <u-avatar :src="userAccountInfo.avatar" size="140" />
       </view>
       <view class="u-flex-1">
-        <view class="u-font-18 u-p-b-20">uView ui</view>
-        <view class="u-font-14 u-tips-color">账号: helang_uView</view>
+        <view class="u-font-18 u-p-b-20">{{ userAccountInfo.nickname }}</view>
+        <view class="u-font-14 u-tips-color"
+          >账号: {{ userAccountInfo.account }}</view
+        >
       </view>
       <view class="u-m-l-10 u-p-10">
         <u-icon name="scan" color="#969799" size="28" />
@@ -43,23 +45,16 @@
         <u-cell-item icon="setting" title="设置" />
       </u-cell-group>
     </view>
-  </default>
+  </Default>
 </template>
 
-<script>
+<script setup lang="ts">
+import { storeToRefs } from 'pinia'
 import Default from '@/layout/default.vue'
+import { useUserStore } from '@/stores/user/user'
 
-export default {
-  components: { Default },
-  data() {
-    return {
-      pic: 'https://uviewui.com/common/logo.png',
-      show: true,
-    }
-  },
-  onLoad() {},
-  methods: {},
-}
+const userStore = useUserStore()
+const { userAccountInfo } = storeToRefs(userStore)
 </script>
 
 <style lang="scss" scoped>
