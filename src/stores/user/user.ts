@@ -1,14 +1,15 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
 import type { UserInfo } from '@/interface/user'
+import logo from '@/static/logo.png'
 
 export const useUserStore = defineStore(
   'user',
   () => {
     const userAccountInfo = ref<UserInfo>({
-      account: 'test ac',
-      nickname: 'test name',
-      avatar: 'https://uviewui.com/common/logo.png',
+      account: 'test_account01',
+      nickname: '小红薯',
+      avatar: logo,
     })
 
     return {
